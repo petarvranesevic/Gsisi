@@ -20,4 +20,5 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+    int i = 1;
 }
