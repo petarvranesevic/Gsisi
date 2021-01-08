@@ -38,28 +38,39 @@ public class Server extends Controller {
    */
 
 
-    public Server(int port) {
+    public Server(int port) throws IOException {
         this.port = port;
         createServer(port);
     }
 
-    public void createServer(int p) {
-        try (ServerSocket serverSocket = new ServerSocket(port)) {
-/*
-            while (true) {
-                Socket socket = serverSocket.accept();
-                System.out.println("New user connected");
+    public void createServer(int p) throws IOException {
 
+        new Thread(() -> {
+            try {
+                ServerSocket serverSocket = new ServerSocket(port);
+                Socket remoteSocket = serverSocket.accept();
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-
- */
-        } catch (IOException ex) {
-            System.out.println("Error in the server: " + ex.getMessage());
-            ex.printStackTrace();
-        }
+        });
     }
 
-    public static int getCount(){
+    /*
+    public void connection(ServerSocket serverSocket){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try{
+                    Socket remoteSocket = serverSocket.accept();
+                }catch (Exception e){
+
+                }
+            }
+        });
+    }
+
+     */
+    public static int getCount() {
         return count;
     }
 

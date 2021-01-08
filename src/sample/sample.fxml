@@ -13,7 +13,7 @@
                   <TextField fx:id="ip_address_text" layoutX="10.0" layoutY="10.0" promptText="IP" />
                   <TextField fx:id="port_text" layoutX="60.0" layoutY="10.0" promptText="Port" />
                   <Button fx:id="startServer_button" mnemonicParsing="false" onAction="#createServer" text="Start" />
-                  <Button fx:id="connect_button" layoutX="457.0" layoutY="10.0" mnemonicParsing="false" text="Connect" />
+                  <Button fx:id="connect_button" layoutX="457.0" layoutY="10.0" mnemonicParsing="false" onAction="#createClient" text="Connect" />
                </children>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
@@ -24,7 +24,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <TextArea fx:id="messages" prefHeight="200.0" prefWidth="200.0" promptText="Ausgabe" />
+                  <TextArea fx:id="messages" prefHeight="141.0" prefWidth="605.0" promptText="Ausgabe" />
                </children>
             </HBox>
          </children>

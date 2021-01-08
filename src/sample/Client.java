@@ -6,36 +6,22 @@ import java.net.UnknownHostException;
 import java.util.function.Consumer;
 
 public class Client extends Controller {
-/*
     private String ip;
     private int port;
+    private String username;
 
-
-    public Client(String ip, int port, Consumer<Serializable> onReceiveCallback) {
-        super(onReceiveCallback);
-        this.port = port;
+    public Client(String ip, int port, String username) throws IOException {
         this.ip = ip;
-
-    }
-    @Override
-    protected boolean isServer() {
-        return false;
+        this.port = port;
+        this.username = username;
+        createClient(ip, port);
     }
 
-    @Override
-    protected String getIP() {
-        return ip;
-    }
-
-    @Override
-    protected int getPort() {
-        return port;
-    }
- */
-
-    public Client(int ip, int port, String username){
+    public void createClient(String clientIp, int clientPort) throws IOException {
+        Socket client = new Socket(clientIp, clientPort);
 
     }
+
 
 }
 

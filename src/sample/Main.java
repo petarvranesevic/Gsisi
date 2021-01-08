@@ -13,26 +13,6 @@ import java.net.Socket;
 
 public class Main extends Application {
 
-    /*
-    private boolean isServer = true;
-    private Controller connection = isServer ? createServer() : createClient();
-
-
-    private Server createServer(){
-        return new Server(5555, data -> {
-            Platform.runLater(() -> {
-            });
-        });
-    }
-
-    private Client createClient(){
-        return new Client("127.0.0.1", 5555,data -> {
-            Platform.runLater(() -> {
-            });
-        });
-    }
-
- */
     @Override
     public void start(Stage primaryStage) throws Exception {
         primaryStage.setTitle("Gsisi Chat");
