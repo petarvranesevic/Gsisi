@@ -40,36 +40,25 @@ public class Server extends Controller {
 
     public Server(int port) throws IOException {
         this.port = port;
-        createServer(port);
     }
 
     public void createServer(int p) throws IOException {
-
-        new Thread(() -> {
-            try {
-                ServerSocket serverSocket = new ServerSocket(port);
-                Socket remoteSocket = serverSocket.accept();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });
+        ServerSocket serverSocket = new ServerSocket(port);
     }
 
-    /*
+
     public void connection(ServerSocket serverSocket){
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try{
-                    Socket remoteSocket = serverSocket.accept();
-                }catch (Exception e){
+       /* new Thread(() -> {
+            try{
+                Socket remoteSocket = serverSocket.accept();
+            }catch (Exception e){
 
-                }
             }
         });
+
+        */
     }
 
-     */
     public static int getCount() {
         return count;
     }

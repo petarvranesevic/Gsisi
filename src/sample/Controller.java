@@ -34,11 +34,13 @@ public class Controller extends Main {
         }else{
             messages.appendText("Server läuft schon!\n");
         }
+
     }
 
     public void createServer(ActionEvent event) throws IOException {
         Server server = new Server(Integer.parseInt(port_text.getText()));
         messages.appendText("Server lauscht auf Port " + Integer.parseInt(port_text.getText()) + "\n");
+
 
     }
 
