@@ -19,7 +19,7 @@
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
                   <TextField fx:id="write_text" promptText="Schreiben.." />
-                  <Button fx:id="send_button" mnemonicParsing="false" text="Send" />
+                  <Button fx:id="send_button" mnemonicParsing="false" onAction="#sendMsg" text="Send" />
                </children>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">

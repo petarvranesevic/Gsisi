@@ -14,13 +14,11 @@ public class Client extends Controller {
         this.ip = ip;
         this.port = port;
         this.username = username;
-        createClient(ip, port);
     }
-
-    public void createClient(String clientIp, int clientPort) throws IOException {
-        Socket client = new Socket(clientIp, clientPort);
+    public static void createClient() throws IOException {
 
     }
+
 
 
 }
